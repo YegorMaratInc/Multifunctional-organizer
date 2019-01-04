@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>581</width>
-    <height>386</height>
+    <width>441</width>
+    <height>372</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,14 +19,14 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>571</width>
+      <width>441</width>
       <height>351</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(143, 201, 255);
-color: rgb(11, 188, 31);
+background-color: rgb(255, 218, 6);
+color: rgb(0, 0, 0);
 </string>
     </property>
    </widget>
@@ -36,8 +36,8 @@ color: rgb(11, 188, 31);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>581</width>
-     <height>21</height>
+     <width>441</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

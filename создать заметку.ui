@@ -7,28 +7,29 @@
     <x>0</x>
     <y>0</y>
     <width>670</width>
-    <height>402</height>
+    <height>403</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 28, 21);
-background-color: rgb(85, 255, 127);</string>
+   <string notr="true">
+background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
+      <y>80</y>
       <width>351</width>
-      <height>311</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 170, 0);</string>
+     <string notr="true">background-color: rgb(255, 218, 6);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="save_2">
@@ -37,14 +38,13 @@ background-color: rgb(85, 255, 127);</string>
       <x>0</x>
       <y>0</y>
       <width>171</width>
-      <height>61</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">
 font: 13pt &quot;Microsoft YaHei&quot;;
-color: rgb(255, 170, 0);
-background-color: rgb(255, 255, 0);</string>
+background-color: rgb(255, 218, 6);</string>
     </property>
     <property name="text">
      <string>Сохранить заметку</string>
@@ -53,27 +53,31 @@ background-color: rgb(255, 255, 0);</string>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>172</x>
-      <y>20</y>
-      <width>181</width>
+      <x>180</x>
+      <y>30</y>
+      <width>171</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 218, 6);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>0</y>
+      <y>-5</y>
       <width>151</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Название заметки</string>
+     <string>Название заметки:</string>
     </property>
    </widget>
    <widget class="Line" name="line">
@@ -126,20 +130,34 @@ background-color: rgb(255, 255, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 255, 0);</string>
+background-color: rgb(255, 218, 6);</string>
     </property>
     <property name="text">
      <string>Графическая заметка</string>
     </property>
    </widget>
-   <zorder>textEdit</zorder>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>5</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
    <zorder>save_2</zorder>
-   <zorder>lineEdit</zorder>
-   <zorder>label</zorder>
    <zorder>line</zorder>
    <zorder>line_2</zorder>
    <zorder>label_2</zorder>
    <zorder>line_4</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>line_3</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
