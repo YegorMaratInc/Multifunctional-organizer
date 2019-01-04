@@ -4,7 +4,7 @@ import math
 import datetime
 from PyQt5 import uic
 from PyQt5.QtWidgets import (QMainWindow, QTextEdit, 
-    QAction, QFileDialog, QApplication, QLabel, QPushButton, QWidget,QLCDNumber, QLineEdit)
+    QAction, QFileDialog, QApplication, QLabel, QPushButton, QWidget,QLCDNumber, QLineEdit, QMessageBox)
 from pickle import loads, dumps
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QColor, QIcon
@@ -38,7 +38,6 @@ class MyWidget(QMainWindow):
         uic.loadUi('проект_ГО.ui', self)
         self.make_2.clicked.connect(self.run)
         self.pushButton.clicked.connect(self.m)
-        self.delete_z.clicked.connect(self.dele)
         self.label.setText('Нет заметок')
         self.listWidget.itemClicked.connect(self.list)
         if len(writ)!=0:
@@ -60,8 +59,14 @@ class MyWidget(QMainWindow):
         Del.setStatusTip('Delete all')
         Del.triggered.connect(self.delall)  
         
+        Help = QAction(QIcon('Help.png'), 'Help', self)
+        Help.setShortcut('Ctrl+H')
+        Help.setStatusTip('Help')
+        Help.triggered.connect(self.pomosh)        
+        
         menubar = self.menuBar
         fileMenu = menubar.addMenu('&Tools')
+        menubar.addAction(Help)
         fileMenu.addAction(openC)
         fileMenu.addAction(openCalendar)       
         fileMenu.addAction(Del) 
@@ -76,7 +81,14 @@ class MyWidget(QMainWindow):
         self.ca.show()
     #Удаление всех заметок
     def delall(self):
+        global writ
+        
+        writ={}
         self.listWidget.clear()    
+    #Помощь
+    def pomosh(self):
+        self.h=Help()
+        self.h.show()
     
     #закрытие приложения,сохранение данных
     def closeEvent(self,event):
@@ -130,6 +142,11 @@ class MyWidget(QMainWindow):
         open_z=button.text()
         self.c = Zam_text()
         self.c.show()       
+#Помощь
+class Help(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('Help.ui',self)
 #Календарь
 class Calendar(QMainWindow):
     def __init__(self):
@@ -141,9 +158,12 @@ class Example(QMainWindow):
     #конструктор класса основа дизайна окна
     def __init__(self):
         super().__init__()
+        self.initUI()
         uic.loadUi('создать заметку.ui', self)
         self.save_2.clicked.connect(self.save)
         self.show()
+    def initUI(self):
+        self.setWindowTitle('Заметка')
     #функция сохранения заметки
     def save(self):
         global writ
@@ -384,12 +404,25 @@ class Calculator(QMainWindow):
 class Zam_text(QMainWindow):
     #конструктор класса основа дизайна окна
     def __init__(self):
-        global writ
-        super().__init__()
+        global writ, open_z
+        super().__init__()  
         uic.loadUi('open_zamet.ui', self)
         self.textEdit.setPlainText(writ[open_z])
         self.save_z.clicked.connect(self.red)
+        self.setWindowTitle('Заметка {}'.format(open_z))
         self.show()
+    #Закрытие    
+    def closeEvent(self, event):
+        global writ, open_z
+        reply = QMessageBox.question(self, 'Close',
+            "Save changes ?", QMessageBox.Yes |
+            QMessageBox.No)
+    
+        if reply == QMessageBox.Yes:
+            writ[open_z]=self.textEdit.toPlainText()
+            event.accept()
+        else:
+            event.accept()    
     #функция сохранения изменения содержания заметки
     def red(self):
         global writ
