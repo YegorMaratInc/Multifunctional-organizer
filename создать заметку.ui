@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>670</width>
+    <width>406</width>
     <height>403</height>
    </rect>
   </property>
@@ -21,9 +21,9 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>5</x>
       <y>80</y>
-      <width>351</width>
+      <width>386</width>
       <height>301</height>
      </rect>
     </property>
@@ -35,10 +35,10 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QPushButton" name="save_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>5</x>
+      <y>6</y>
       <width>171</width>
-      <height>71</height>
+      <height>64</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -55,7 +55,7 @@ background-color: rgb(255, 218, 6);</string>
      <rect>
       <x>180</x>
       <y>30</y>
-      <width>171</width>
+      <width>211</width>
       <height>41</height>
      </rect>
     </property>
@@ -68,13 +68,13 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>-5</y>
-      <width>151</width>
+      <y>0</y>
+      <width>171</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>Название заметки:</string>
@@ -83,65 +83,22 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>10</y>
+      <x>389</x>
+      <y>0</y>
       <width>20</width>
-      <height>361</height>
+      <height>381</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>50</y>
-      <width>311</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line_4">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>355</y>
-      <width>321</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>10</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 218, 6);</string>
-    </property>
-    <property name="text">
-     <string>Графическая заметка</string>
-    </property>
-   </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>5</y>
-      <width>171</width>
+      <y>10</y>
+      <width>221</width>
       <height>31</height>
      </rect>
     </property>
@@ -149,22 +106,19 @@ background-color: rgb(255, 218, 6);</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <zorder>line_3</zorder>
    <zorder>save_2</zorder>
    <zorder>line</zorder>
-   <zorder>line_2</zorder>
-   <zorder>label_2</zorder>
-   <zorder>line_4</zorder>
    <zorder>textEdit</zorder>
-   <zorder>line_3</zorder>
-   <zorder>lineEdit</zorder>
    <zorder>label</zorder>
+   <zorder>lineEdit</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>670</width>
+     <width>406</width>
      <height>20</height>
     </rect>
    </property>

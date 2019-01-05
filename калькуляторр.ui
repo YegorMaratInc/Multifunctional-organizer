@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>385</width>
-    <height>381</height>
+    <height>384</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,8 +41,8 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
 alternate-background-color: rgb(255, 170, 0);
-color: rgb(253, 169, 0);
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+color: rgb(0, 0, 0);
+font: 13pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string/>
